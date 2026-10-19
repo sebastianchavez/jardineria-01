@@ -41,7 +41,10 @@
   --bs-btn-active-bg: var(--leaf-700);
   --bs-btn-active-border-color: var(--leaf-700);
 }
-.btn-primary, .btn-outline-primary {
+.btn-primary {
+  --bs-btn-color: #fff;
+}
+.btn-outline-primary {
   --bs-btn-color: var(--leaf-600);
   --bs-btn-border-color: var(--leaf-500);
 }
@@ -1167,6 +1170,21 @@ footer .copyright {
 }
 
 /* ---------- Mobile tweaks ---------- */
+@media (max-width: 991.98px) {
+  .price-table .price-cell { white-space: normal; }
+  .pricing-card { padding: 2rem 1rem; }
+}
+
+@media (max-width: 1399.98px) {
+  /* Sideways reveals can exceed the container margins at these widths. */
+  .reveal-left, .reveal-right { transform: translateY(30px); }
+  .reveal-left.visible, .reveal-right.visible { transform: translateY(0); }
+}
+
+@media (max-width: 575.98px) {
+  .hero .badge { white-space: normal; line-height: 1.5; }
+}
+
 @media (max-width: 768px) {
   body { padding-top: 70px; }
   .section { padding: 3rem 0; }
